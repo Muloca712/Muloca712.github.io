@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Schürmann - Gartenbauwissenschaftler</title>
+    <style>
+        /* Allgemeines Styling für die Website */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50;
+            padding: 50;
+            color: rgb(251, 252, 251);
+            /* Textfarbe weiß, um sich vom Hintergrund abzuheben */
+            background-image: url('Background2.jpg');
+            /* Hier wird das Hintergrundbild gesetzt */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-size: 18px;
+        }
+
+        a {
+            /* Specify non-transparent defaults to certain properties,
+     allowing them to be styled with the :visited state */
+            color: white;
+            
+        }
+
+        a:visited {
+            
+            color: rgb(45, 9, 112);
+        }
+
+        header {
+            background-color: rgba(45, 126, 106);
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 21px
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: rgb(45, 126, 106);
+            margin: 0 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+            display: none;
+            /* Verstecke den Inhalt zu Beginn */
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .profile .info {
+            max-width: 600px;
+        }
+
+        .section-header {
+            margin-top: 40px;
+            font-size: 1.5em;
+            text-decoration: underline;
+        }
+
+        .projects a,
+        .volunteer a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .projects a:hover,
+        .volunteer a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        // JavaScript, um die Navigation interaktiv zu machen
+        function showSection(sectionId) {
+            // Alle Inhalte ausblenden
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            // Den gewählten Abschnitt anzeigen
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+
+        // Standardmäßig den Home-Bereich anzeigen
+        window.onload = function () {
+            showSection('home');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Lucas Schürmann - Gartenbauwissenschaftler</h1>
+    </header>
+
+    <nav>
+        <a href="javascript:void(0);" onclick="showSection('home')">Home</a>
+        <a href="javascript:void(0);" onclick="showSection('work')">Work</a>
+        <a href="javascript:void(0);" onclick="showSection('projects')">Projekte / Publikationen</a>
+        <a href="javascript:void(0);" onclick="showSection('contact')">Kontakt</a>
+    </nav>
+
+    <div id="home" class="content">
+        <div class="profile">
+            <img src="Bewerbungsbild.jpg" alt="Lucas Schürmann">
+            <div class="info">
+                <h2>Über mich</h2>
+                <p>Ich bin Lucas Schürmann, ein Gartenbauwissenschaftler mit besonderem Interesse an nachhaltiger
+                    Landwirtschaft und Pflanzentechnologie. Ich habe einen Bachelorabschluss in Gartenbauwissenschaften
+                    und arbeite an Projekten, die sich mit innovativen Anbaumethoden und der Förderung von biodiversen,
+                    ressourcenschonenden Produktionssystemen befassen.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="work" class="content">
+        <h2 class="section-header">Beruflicher Werdegang</h2>
+        <ul>
+            <li>Erste Berufserfahrungen im Familienunternehmen "Schürmann Abfallbeseitigung GmbH"</li>
+            <li>Pizzabote und Saisonarbeit im Hochseilkletterpark während der Schulzeit</li>
+            <li>FSJ im Bereich Sport für den Kreis Herford und dem Königin Mathilde Gymnasium</li>
+            <li>Hilfswissenschaftler im Institut für Gartenbauliche Produktionssysteme</li>
+            <li>Fieldgrower bei Infarm</li>
+            <li>Florist und im Garten- und Landschaftsbau tätig</li>
+        </ul>
+    </div>
+
+    <div id="projects" class="content">
+        <h2 class="section-header">Projekte / Publikationen</h2>
+        <p>Meine erste Publikation zum Thema "Rain cracking in sweet cherries is caused by surface wetness, not by water
+            uptake" wurde in der Fachzeitschrift *Scientia Horticulturae* veröffentlicht. Sie ist unter folgendem
+            DOI-Link zugänglich:</p>
+        <p><a href="https://doi.org/10.1016/j.scienta.2020.109400" target="_blank">DOI:
+                10.1016/j.scienta.2020.109400</a> </p>
+
+        <h3 class="section-header">Ehrenamtliches Engagement</h3>
+        <p>Ich engagiere mich auch ehrenamtlich in mehreren Projekten:</p>
+        <ul>
+            <li><strong>Baulücke:</strong> Ein Projekt zur nachhaltigen Lebensmittelproduktion, das den Bezug der
+                Menschen zu ihrer Nahrung wiederherstellen soll. Weitere Informationen findest du <a
+                    href="https://www.tthannover.de/projekte/bauluecke/" target="_blank">hier</a>.</li>
+            <li><strong>ZuKunstboot:</strong> Ein Projekt, das sich mit Wassersport, kulturellem Wandel und
+                nachhaltiger Freizeitgestaltung befasst. Weitere Informationen findest du <a
+                    href="https://open-island.org/zukunst/" target="_blank">hier</a>.</li>
+            <li><strong>Festivalkult:</strong> Ein Musikfestival, welches jährlich im Nachbarort meiner Heimatstadt stattfindet. Weitere Informationen findest du <a
+                    href="https://festivalkult.de//Festivalkult/" target="_blank">hier</a>.</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="content">
+        <h2 class="section-header">Kontakt</h2>
+        <p>Du kannst mich unter den folgenden Kontaktinformationen erreichen:</p>
+        <ul>
+            <li>Email: <a href="mailto:l.schuermann2011@gmail.com">l.schuermann2011@gmail.com</a></li>
+            <li>Adresse: Bennostr. 13, 30451 Hannover</li>
+            <li>Telefon: 015789662553</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2024 Lucas Schürmann - Alle Rechte vorbehalten</p>
+    </footer>
+</body>
+
+</html>
